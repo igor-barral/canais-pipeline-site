@@ -37,6 +37,14 @@ OAuth, etc.).
 
 ## Manter atualizado
 
-Se um canal novo for adicionado ao `canais-pipeline` (repo do app), ou um
-escopo de OAuth novo passar a ser pedido, atualize a lista de canais em
-`index.html` e a tabela de escopos em `privacy.html` de acordo.
+As páginas são propositalmente genéricas (não citam canais específicos nem
+detalhes internos de funcionamento do app). Se um escopo de OAuth novo
+passar a ser pedido (YouTube ou TikTok), atualize a tabela de escopos
+correspondente em `privacy.html`.
+
+## Por que as páginas são genéricas
+
+`index.html` e `privacy.html` descrevem o app em termos gerais (o que ele
+faz, quais APIs/escopos usa) sem listar os canais operados nem detalhes de
+como o conteúdo é produzido internamente — só o necessário pra análise das
+plataformas (Google/TikTok) entenderem o uso dos escopos pedidos.

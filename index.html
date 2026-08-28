@@ -24,9 +24,10 @@
   <span class="badge">Ferramenta interna — ClickWeb</span>
   <h1>canais-pipeline</h1>
   <p class="lede">
-    Aplicativo desktop (Electron) que produz e publica vídeos curtos, sob demanda e em lote,
-    nos canais de YouTube e TikTok que a própria ClickWeb administra. Não é um serviço público
-    nem é distribuído para terceiros — é operado só pela equipe da ClickWeb, nas contas da ClickWeb.
+    Aplicativo desktop usado internamente pela ClickWeb para produzir e publicar vídeos curtos
+    nos canais de YouTube e TikTok que a própria ClickWeb administra. Não é um serviço público,
+    não tem cadastro de usuários e não é distribuído para terceiros — é operado só pela equipe
+    da ClickWeb, nas contas da própria ClickWeb.
   </p>
 
   <div class="cta-row">
@@ -38,55 +39,19 @@
   <section>
     <h2>O que o app faz</h2>
     <p>
-      Em vez de produzir cada vídeo manualmente, o operador informa quantos vídeos quer de cada
-      canal/tipo numa tela única e o app cuida do resto: gera ou traduz o conteúdo, monta o vídeo
-      final e publica como <strong>privado</strong> na conta conectada — a decisão de tornar
-      público continua manual, feita depois pelo próprio operador no YouTube Studio ou no TikTok.
+      O app automatiza a produção e a publicação de vídeos curtos nos canais de YouTube e
+      TikTok da ClickWeb: o operador informa quanto conteúdo quer produzir e o app cuida do
+      resto, publicando cada vídeo inicialmente como <strong>privado</strong> — a decisão de
+      tornar um vídeo público continua manual, feita depois pelo próprio operador diretamente
+      no YouTube Studio ou no TikTok.
     </p>
-  </section>
-
-  <section>
-    <h2>Canais operados</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Seguro Não Morre De Velho</h3>
-        <p>Shorts de educação financeira comportamental — roteiro gerado por IA a partir do nicho do canal.</p>
-        <div class="platform-tags"><span>YouTube</span><span>TikTok</span></div>
-      </div>
-      <div class="card">
-        <h3>Bugadinho 4K</h3>
-        <p>Shorts de entretenimento/humor — histórias curtas, causos e reações virais.</p>
-        <div class="platform-tags"><span>YouTube</span><span>TikTok</span></div>
-      </div>
-      <div class="card">
-        <h3>Verbo &amp; Oração</h3>
-        <p>Orações curtas de bom dia e de boa noite, a partir de um versículo bíblico.</p>
-        <div class="platform-tags"><span>YouTube</span><span>TikTok</span></div>
-      </div>
-      <div class="card">
-        <h3>Pulse &amp; Motion</h3>
-        <p>Clipes curtos de dança/K-pop curados de fontes públicas, com título traduzido/adaptado.</p>
-        <div class="platform-tags"><span>YouTube</span><span>TikTok</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Como funciona por dentro</h2>
-    <ul class="plain">
-      <li><strong>Roteiro/tradução:</strong> um modelo de linguagem (via sessão web logada pelo próprio operador) escreve ou adapta o texto de cada vídeo.</li>
-      <li><strong>Narração:</strong> síntese de voz local (Piper TTS), sem enviar áudio pra nuvem.</li>
-      <li><strong>Imagens/clipes de fundo:</strong> banco de vídeos/fotos royalty-free (Pexels).</li>
-      <li><strong>Montagem final:</strong> ffmpeg, rodando localmente na máquina do operador.</li>
-      <li><strong>Publicação:</strong> YouTube Data API v3 e TikTok Content Posting API, sempre em nome da própria conta que o operador conectou.</li>
-    </ul>
   </section>
 
   <section>
     <h2>Quem usa</h2>
     <p>
-      Uso restrito à equipe da ClickWeb, publicando somente nas contas de YouTube e TikTok que a
-      própria ClickWeb administra. O app não abre cadastro, não tem contas de terceiros e não
+      Uso restrito à equipe da ClickWeb, publicando somente nas contas de YouTube e TikTok que
+      a própria ClickWeb administra. O app não abre cadastro, não tem contas de terceiros e não
       publica em nome de ninguém além do operador que conectou a conta.
     </p>
   </section>

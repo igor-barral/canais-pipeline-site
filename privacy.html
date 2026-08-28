@@ -27,10 +27,9 @@
   <p>
     O <strong>canais-pipeline</strong> é uma ferramenta interna, desenvolvida e operada pela
     ClickWeb, usada para produzir e publicar vídeos curtos nos próprios canais de YouTube e
-    TikTok que a ClickWeb administra (atualmente: Seguro Não Morre De Velho, Bugadinho 4K,
-    Verbo &amp; Oração e Pulse &amp; Motion). Não é um serviço público, não tem cadastro de
-    usuários e não é oferecido a terceiros — só a equipe da ClickWeb o executa, na própria
-    máquina, conectando as próprias contas.
+    TikTok que a ClickWeb administra. Não é um serviço público, não tem cadastro de usuários e
+    não é oferecido a terceiros — só a equipe da ClickWeb o executa, na própria máquina,
+    conectando as próprias contas.
   </p>
 
   <h2>Quem opera o app e quem é o titular dos dados</h2>
@@ -49,7 +48,7 @@
       <tr><td><code>youtube.upload</code></td><td>Subir os vídeos produzidos, sempre como <strong>privados</strong>.</td></tr>
       <tr><td><code>youtube.force-ssl</code></td><td>Editar metadados (título/descrição) de vídeos já publicados pelo próprio app, quando necessário corrigir algo.</td></tr>
       <tr><td><code>youtube.readonly</code></td><td>Ler informações básicas do canal conectado.</td></tr>
-      <tr><td><code>yt-analytics.readonly</code></td><td>Ler estatísticas de desempenho (visualizações, retenção, inscritos) dos vídeos publicados pelo próprio app, exibidas na aba "Analytics" do app.</td></tr>
+      <tr><td><code>yt-analytics.readonly</code></td><td>Ler estatísticas de desempenho (visualizações, retenção, inscritos) dos vídeos publicados pelo próprio app.</td></tr>
     </tbody>
   </table>
   <p>
@@ -77,21 +76,22 @@
     conta explicitamente conectada pelo operador.
   </p>
 
-  <h2>Outros serviços de terceiros usados na produção</h2>
-  <ul class="plain">
-    <li><strong>Modelo de linguagem (ChatGPT):</strong> usado, via a sessão web do próprio operador (login manual, sessão local persistida), só para escrever/traduzir o texto de cada vídeo. Nenhuma credencial de API é enviada; a automação só interage com a página como um navegador comum faria.</li>
-    <li><strong>Pexels:</strong> banco de imagens/vídeos royalty-free, usado para buscar clipes de fundo via a chave de API pessoal do operador.</li>
-    <li><strong>Fontes públicas de vídeo (Bilibili e afins, canal Pulse &amp; Motion):</strong> o app busca e baixa clipes públicos pra recortar/curar, sem autenticação nem coleta de dados pessoais dessas plataformas.</li>
-  </ul>
+  <h2>Serviços de terceiros usados na produção do conteúdo</h2>
+  <p>
+    O app pode usar serviços de terceiros (ex.: bancos de mídia de terceiros, assistentes de
+    IA para redação de texto, síntese de voz) como parte do processo de criação do conteúdo,
+    sempre com credenciais/sessões do próprio operador e sem enviar dados pessoais de
+    espectadores a esses serviços — só o texto/mídia necessários pra montar o vídeo.
+  </p>
 
   <h2>Como e onde os dados são armazenados</h2>
   <p>
     Os tokens de acesso (OAuth) do YouTube e do TikTok, o histórico de vídeos produzidos e as
     configurações do app ficam salvos <strong>localmente</strong>, no computador onde o app
     roda. Não há servidor próprio, banco de dados remoto, nem qualquer envio desses dados para
-    a ClickWeb ou para terceiros além das próprias APIs (Google/YouTube, TikTok, Pexels) usadas
-    para executar a ação pedida pelo operador. Não vendemos, compartilhamos nem usamos esses
-    dados para publicidade ou para treinar modelos de terceiros.
+    a ClickWeb ou para terceiros além das próprias APIs (Google/YouTube, TikTok) usadas para
+    executar a ação pedida pelo operador. Não vendemos, compartilhamos nem usamos esses dados
+    para publicidade ou para treinar modelos de terceiros.
   </p>
 
   <h2>Retenção e revogação</h2>
