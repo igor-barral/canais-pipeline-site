@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Política de Privacidade — canais-pipeline</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Política de Privacidade do canais-pipeline, ferramenta interna da ClickWeb.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <div class="brand"><span class="dot"></span> canais-pipeline</div>
+    <nav class="site-nav">
+      <a href="index.html">Aplicação</a>
+      <a href="privacy.html" class="active">Privacidade</a>
+      <a href="terms.html">Termos de Uso</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc">
+  <h1>Política de Privacidade</h1>
+  <p class="meta">Última atualização: 28 de agosto de 2026</p>
+
+  <p>
+    O <strong>canais-pipeline</strong> é uma ferramenta interna, desenvolvida e operada pela
+    ClickWeb, usada para produzir e publicar vídeos curtos nos próprios canais de YouTube e
+    TikTok que a ClickWeb administra (atualmente: Seguro Não Morre De Velho, Bugadinho 4K,
+    Verbo &amp; Oração e Pulse &amp; Motion). Não é um serviço público, não tem cadastro de
+    usuários e não é oferecido a terceiros — só a equipe da ClickWeb o executa, na própria
+    máquina, conectando as próprias contas.
+  </p>
+
+  <h2>Quem opera o app e quem é o titular dos dados</h2>
+  <p>
+    O app é executado localmente pelo operador (funcionário/colaborador autorizado da
+    ClickWeb). Os "dados" tratados por ele são as próprias contas de YouTube/TikTok que o
+    operador conecta — não há coleta de dados de visitantes, espectadores ou qualquer pessoa
+    além do próprio operador.
+  </p>
+
+  <h2>Dados acessados via YouTube (Google)</h2>
+  <p>Ao conectar um canal do YouTube, o app usa a YouTube Data API v3 e a YouTube Analytics API, com os seguintes escopos OAuth:</p>
+  <table class="scope-table">
+    <thead><tr><th>Escopo</th><th>Para que é usado</th></tr></thead>
+    <tbody>
+      <tr><td><code>youtube.upload</code></td><td>Subir os vídeos produzidos, sempre como <strong>privados</strong>.</td></tr>
+      <tr><td><code>youtube.force-ssl</code></td><td>Editar metadados (título/descrição) de vídeos já publicados pelo próprio app, quando necessário corrigir algo.</td></tr>
+      <tr><td><code>youtube.readonly</code></td><td>Ler informações básicas do canal conectado.</td></tr>
+      <tr><td><code>yt-analytics.readonly</code></td><td>Ler estatísticas de desempenho (visualizações, retenção, inscritos) dos vídeos publicados pelo próprio app, exibidas na aba "Analytics" do app.</td></tr>
+    </tbody>
+  </table>
+  <p>
+    Este app usa a YouTube API Services. Ao usá-lo, o operador concorda com os
+    <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">Termos de Serviço do YouTube</a>
+    e reconhece a <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidade do Google</a>.
+  </p>
+
+  <h2>Dados acessados via TikTok</h2>
+  <p>Ao conectar uma conta do TikTok, o app usa a Content Posting API oficial do TikTok, com os seguintes escopos:</p>
+  <table class="scope-table">
+    <thead><tr><th>Escopo</th><th>Para que é usado</th></tr></thead>
+    <tbody>
+      <tr><td><code>user.info.basic</code></td><td>Ler informações básicas do perfil da conta conectada (nome de exibição, foto, ID da conta) e os limites de publicação/privacidade permitidos pra essa conta.</td></tr>
+      <tr><td><code>video.publish</code></td><td>Publicar vídeos em nome dessa mesma conta, a pedido do operador.</td></tr>
+    </tbody>
+  </table>
+  <p>
+    Enquanto o app não passa pela auditoria de conteúdo do TikTok, todo vídeo publicado sai
+    visível só para a própria conta (<code>SELF_ONLY</code>) — restrição imposta pelo TikTok,
+    não uma escolha do app.
+  </p>
+  <p>
+    Não coletamos dados de espectadores, seguidores ou qualquer conta do TikTok que não seja a
+    conta explicitamente conectada pelo operador.
+  </p>
+
+  <h2>Outros serviços de terceiros usados na produção</h2>
+  <ul class="plain">
+    <li><strong>Modelo de linguagem (ChatGPT):</strong> usado, via a sessão web do próprio operador (login manual, sessão local persistida), só para escrever/traduzir o texto de cada vídeo. Nenhuma credencial de API é enviada; a automação só interage com a página como um navegador comum faria.</li>
+    <li><strong>Pexels:</strong> banco de imagens/vídeos royalty-free, usado para buscar clipes de fundo via a chave de API pessoal do operador.</li>
+    <li><strong>Fontes públicas de vídeo (Bilibili e afins, canal Pulse &amp; Motion):</strong> o app busca e baixa clipes públicos pra recortar/curar, sem autenticação nem coleta de dados pessoais dessas plataformas.</li>
+  </ul>
+
+  <h2>Como e onde os dados são armazenados</h2>
+  <p>
+    Os tokens de acesso (OAuth) do YouTube e do TikTok, o histórico de vídeos produzidos e as
+    configurações do app ficam salvos <strong>localmente</strong>, no computador onde o app
+    roda. Não há servidor próprio, banco de dados remoto, nem qualquer envio desses dados para
+    a ClickWeb ou para terceiros além das próprias APIs (Google/YouTube, TikTok, Pexels) usadas
+    para executar a ação pedida pelo operador. Não vendemos, compartilhamos nem usamos esses
+    dados para publicidade ou para treinar modelos de terceiros.
+  </p>
+
+  <h2>Retenção e revogação</h2>
+  <p>
+    Os tokens permanecem salvos localmente até que o operador desconecte a conta pelo próprio
+    app, ou revogue o acesso diretamente nas configurações da conta Google
+    ("Segurança → Apps de terceiros com acesso à conta") ou do TikTok
+    ("Configurações → Apps e Serviços Conectados"). Ao revogar, o app perde o acesso
+    imediatamente na próxima tentativa de uso.
+  </p>
+
+  <h2>Exclusão de dados</h2>
+  <p>
+    Como todos os dados ficam só na máquina local do operador, a exclusão é imediata: basta
+    desconectar a conta pelo app (ou apagar a pasta de dados do app) e/ou revogar o acesso
+    diretamente no Google/TikTok, como descrito acima. Pedidos de esclarecimento podem ser
+    enviados para o contato abaixo.
+  </p>
+
+  <h2>Contato</h2>
+  <p>
+    Dúvidas sobre esta política ou pedidos relacionados a dados:
+    <a href="mailto:igor@clickweb.com.br">igor@clickweb.com.br</a>
+  </p>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>ClickWeb — canais-pipeline</span>
+    <span><a href="index.html">Aplicação</a> · <a href="terms.html">Termos de Uso</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

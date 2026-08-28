@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>canais-pipeline — ClickWeb</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="canais-pipeline é a ferramenta interna da ClickWeb para produzir e publicar vídeos curtos nos próprios canais de YouTube e TikTok.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <div class="brand"><span class="dot"></span> canais-pipeline</div>
+    <nav class="site-nav">
+      <a href="index.html" class="active">Aplicação</a>
+      <a href="privacy.html">Privacidade</a>
+      <a href="terms.html">Termos de Uso</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <span class="badge">Ferramenta interna — ClickWeb</span>
+  <h1>canais-pipeline</h1>
+  <p class="lede">
+    Aplicativo desktop (Electron) que produz e publica vídeos curtos, sob demanda e em lote,
+    nos canais de YouTube e TikTok que a própria ClickWeb administra. Não é um serviço público
+    nem é distribuído para terceiros — é operado só pela equipe da ClickWeb, nas contas da ClickWeb.
+  </p>
+
+  <div class="cta-row">
+    <a class="btn primary" href="mailto:igor@clickweb.com.br">Contato do desenvolvedor</a>
+    <a class="btn ghost" href="privacy.html">Política de Privacidade</a>
+    <a class="btn ghost" href="terms.html">Termos de Uso</a>
+  </div>
+
+  <section>
+    <h2>O que o app faz</h2>
+    <p>
+      Em vez de produzir cada vídeo manualmente, o operador informa quantos vídeos quer de cada
+      canal/tipo numa tela única e o app cuida do resto: gera ou traduz o conteúdo, monta o vídeo
+      final e publica como <strong>privado</strong> na conta conectada — a decisão de tornar
+      público continua manual, feita depois pelo próprio operador no YouTube Studio ou no TikTok.
+    </p>
+  </section>
+
+  <section>
+    <h2>Canais operados</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Seguro Não Morre De Velho</h3>
+        <p>Shorts de educação financeira comportamental — roteiro gerado por IA a partir do nicho do canal.</p>
+        <div class="platform-tags"><span>YouTube</span><span>TikTok</span></div>
+      </div>
+      <div class="card">
+        <h3>Bugadinho 4K</h3>
+        <p>Shorts de entretenimento/humor — histórias curtas, causos e reações virais.</p>
+        <div class="platform-tags"><span>YouTube</span><span>TikTok</span></div>
+      </div>
+      <div class="card">
+        <h3>Verbo &amp; Oração</h3>
+        <p>Orações curtas de bom dia e de boa noite, a partir de um versículo bíblico.</p>
+        <div class="platform-tags"><span>YouTube</span><span>TikTok</span></div>
+      </div>
+      <div class="card">
+        <h3>Pulse &amp; Motion</h3>
+        <p>Clipes curtos de dança/K-pop curados de fontes públicas, com título traduzido/adaptado.</p>
+        <div class="platform-tags"><span>YouTube</span><span>TikTok</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Como funciona por dentro</h2>
+    <ul class="plain">
+      <li><strong>Roteiro/tradução:</strong> um modelo de linguagem (via sessão web logada pelo próprio operador) escreve ou adapta o texto de cada vídeo.</li>
+      <li><strong>Narração:</strong> síntese de voz local (Piper TTS), sem enviar áudio pra nuvem.</li>
+      <li><strong>Imagens/clipes de fundo:</strong> banco de vídeos/fotos royalty-free (Pexels).</li>
+      <li><strong>Montagem final:</strong> ffmpeg, rodando localmente na máquina do operador.</li>
+      <li><strong>Publicação:</strong> YouTube Data API v3 e TikTok Content Posting API, sempre em nome da própria conta que o operador conectou.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Quem usa</h2>
+    <p>
+      Uso restrito à equipe da ClickWeb, publicando somente nas contas de YouTube e TikTok que a
+      própria ClickWeb administra. O app não abre cadastro, não tem contas de terceiros e não
+      publica em nome de ninguém além do operador que conectou a conta.
+    </p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>ClickWeb — canais-pipeline</span>
+    <span><a href="privacy.html">Privacidade</a> · <a href="terms.html">Termos de Uso</a> · <a href="mailto:igor@clickweb.com.br">igor@clickweb.com.br</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
