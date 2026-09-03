@@ -58,6 +58,14 @@ header.site-header {
   flex: none;
 }
 
+.brand-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  flex: none;
+  object-fit: cover;
+}
+
 nav.site-nav {
   display: flex;
   gap: 20px;
